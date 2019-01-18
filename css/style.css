@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yanone+Kaffeesatz');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/*Estilo para los titulos*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing:1.5px;
+}
+
+.section__titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #FBA919;
+}
+
+.contenedor {
+    margin: auto;
+    width: 99%;
+}
+
+/*--------------Estilos del header--------------*/
+.header {
+    height: 68px;
+}
+
+.header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo, .icon-menu {
+    margin: 5px;
+    color: #fff;
+}
+
+.icon-menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #FBA919;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/*--------------Estilos del menu--------------*/
+.nav {
+    position:absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.4s;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__link {
+    display: block;
+    padding: 20px;
+    background: #FBA919;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu__link:hover, .select{
+    background: white;
+    color: #FBA919;
+}
+
+.mostrar {
+    left: 0;
+}
+
+/*--------------Estilos del banner--------------*/
+.banner {
+    margin-top: -70px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 20px;
+    
+}
+
+.banner img {
+    width: 100%;
+    
+}
+
+.banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.banner__txt {
+    display: none;
+}
+
+.banner__social .social [class^="icon-"] {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-size: 100px;
+    padding: 70px;
+    background: white;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    line-height: 40px;
+}
+
+/*--------------Estilos de islas--------------*/
+
+.islas__columna {
+    background: #FBA919;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+/*--------------Estilos de recetas--------------*/
+.recetas__columna {
+    position: relative;
+    margin-bottom: 30px;
+}
+.recetas__descripcion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    width: 60%;
+    height: 100%;
+    padding: 5px;
+}
+
+.recetas__titulo {
+    font-size: 25px;
+    margin: 5px 0;
+}
+
+.recetas__img {
+    width: 100%;
+}
+
+/*--------------Estilo del footer--------------*/
+
+.footer {
+    background: #333;
+    color: #ffF;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"] {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    
+}
+
+/*--------------Estilos responsive--------------*/
+/*Tamaño mobil*/
+@media(min-width:480px) {
+    .logo {
+        font-size: 40px;
+    }
+    
+    .banner__titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    
+    .banner__txt {
+        display: block;
+        font-size: 18px;
+        margin: 7px 0;
+    }
+    
+    .islas , .recetas {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -90px;
+    }
+    
+    .islas__columna {
+        width: 31%;
+    } 
+    
+    .islas__titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    
+    .section__titulo {
+        width: 100%;
+    }
+    
+    .recetas {
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    
+    .recetas__columna {
+        width: 48%;
+    }
+    
+
+}
+
+/*Tamaño tablet*/
+@media(min-width:768px) {
+    .banner__titulo {
+        font-size: 50px;
+    }
+    
+    .recetas__titulo {
+        font-size: 40px;
+    }
+}
+
+@media(min-width:1024px) {
+    .contenedor {
+        width: 900px;
+    }
+    
+    .section__titulo {
+        font-size: 50px;
+        margin: 30px 0;
+    }
+    .nav {
+        position: static;
+        width: auto;
+    }
+    
+    .menu {
+        display: flex;
+    }
+    
+    .icon-menu {
+        display: none;
+    }
+    
+    .menu__link {
+        background: none;
+        font-size: 20px;
+    }
+    
+    .select {
+        color: #fff;
+        background: #FBA919;
+    }
+    
+    .banner__titulo {
+        font-size: 60px;
+    }
+    
+    .banner__txt {
+        font-size: 25px;
+    }
+    
+    .islas {
+        margin-top: -120px;
+    }
+    
+    .islas__columna {
+        padding: 30px;
+    }
+    .islas__titulo {
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .recetas__descripcion {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .recetas__titulo {
+        font-size: 50px;
+    }
+    
+    .recetas__txt {
+        font-size: 20px;
+        
+    }
+}
+
+@media(min-width:1280px) {
+    .contenedor {
+        width: 1200px;
+    }
+    
+    .logo {
+        font-size: 60px;
+    }
+    
+    .banner .contenedor {
+        top: 40%;
+    }
+    
+    .islas {
+        margin-top: -220px;
+    }
+}
